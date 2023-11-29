@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
-import { Appearance, useColorScheme, Button } from 'react-native'
+import { useColorScheme } from 'react-native'
 
 export default function App() {
   const colorScheme = useColorScheme()
   const appearanceStyle =
-    colorScheme === 'dark' ? styles.darkMode : styles.lightMode
+    colorScheme === 'light' ? styles.lightMode : styles.darkMode
 
   return (
     <SafeAreaView style={[styles.safeArea, appearanceStyle]}>
