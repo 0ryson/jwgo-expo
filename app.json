@@ -3,6 +3,7 @@
     "name": "jwgo",
     "slug": "jwgo",
     "version": "1.0.0",
+    "scheme": "jwgo",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -22,7 +23,9 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router"]
   }
 }
