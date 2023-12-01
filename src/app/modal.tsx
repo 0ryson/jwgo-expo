@@ -1,8 +1,7 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, View, SafeAreaView, Text } from 'react-native'
 import { useColorScheme } from 'react-native'
 
-export default function App() {
+export default function Modal() {
   const colorScheme = useColorScheme()
   const appearanceStyle =
     colorScheme === 'light' ? styles.lightMode : styles.darkMode
@@ -10,8 +9,7 @@ export default function App() {
   return (
     <SafeAreaView style={[styles.safeArea, appearanceStyle]}>
       <View style={styles.container}>
-        <Text>JWGO</Text>
-        <StatusBar style="auto" />
+        <Text>Modal</Text>
       </View>
     </SafeAreaView>
   )
