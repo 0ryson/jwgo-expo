@@ -1,12 +1,12 @@
 import { create } from 'zustand'
 
 type Store = {
-  menuState: boolean
+  menuState: boolean | undefined
   setMenuState: (data: boolean) => void
 }
 
 const useApp = create<Store>((set) => ({
-  menuState: false,
+  menuState: undefined,
   setMenuState: (data) => set(() => ({ menuState: data })),
 }))
 

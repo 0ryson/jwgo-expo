@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import useApp from '../../store/app'
+import useApp from '../../store/useApp'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import Home from './home'
 import Board from './board'

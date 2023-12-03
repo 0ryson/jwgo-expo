@@ -2,27 +2,30 @@ import React, { ReactElement } from 'react'
 import { Link } from 'expo-router'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { Drawer } from 'react-native-drawer-layout'
-import useApp from '../store/app'
+import useData from '../data/useData'
 
 export default function Menu({ children }: { children: ReactElement }) {
-  const menuState = useApp((state) => state.menuState)
-  const setMenuState = useApp((state) => state.setMenuState)
+  const { menu, setMenu } = useData()
 
   return (
     <Drawer
-      open={menuState}
-      onOpen={() => setMenuState(true)}
-      onClose={() => setMenuState(false)}
+      open={menu !== undefined && menu}
+      onOpen={() => {
+        setMenu(true)
+      }}
+      onClose={() => {
+        menu !== undefined && setMenu(false)
+      }}
       drawerType="front"
       renderDrawerContent={() => (
         <SafeAreaView style={styles.safeArea}>
-          <Link href={'/'} onPress={() => setMenuState(false)}>
+          <Link href={'/'} onPress={() => setMenu(false)}>
             Index
           </Link>
-          <Link href={'/home'} onPress={() => setMenuState(false)}>
+          <Link href={'/home'} onPress={() => setMenu(false)}>
             Tabs - Home
           </Link>
-          <Link href={'/modal'} onPress={() => setMenuState(false)}>
+          <Link href={'/modal'} onPress={() => setMenu(false)}>
             Modal
           </Link>
         </SafeAreaView>
