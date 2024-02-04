@@ -1,4 +1,4 @@
-import useDataMenu from '@/data/useDataMenu'
+import useDataMenu from '../data/useDataMenu'
 
 export default function useData() {
   const { menu, setMenu, loadMenu } = useDataMenu()

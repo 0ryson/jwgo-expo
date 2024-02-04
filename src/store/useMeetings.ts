@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Meeting } from '@/types/Meetings'
+import { Meeting } from '../types/Meetings'
 
 type Store = {
   meetings: Meeting

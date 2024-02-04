@@ -1,4 +1,4 @@
-import type { PersonMinimal } from '@/types/Persons'
+import type { PersonMinimal } from '../types/Persons'
 
 export type Meeting =
   | undefined

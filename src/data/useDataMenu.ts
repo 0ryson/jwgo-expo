@@ -1,6 +1,6 @@
 import useApp from '../store/useApp'
-import useHelpers from '@/helpers/useHelpers'
-import useDatabase from '@/database/useDatabase'
+import useHelpers from '../helpers/useHelpers'
+import useDatabase from '../database/useDatabase'
 
 export default function useData() {
   const setMenuState = useApp((state) => state.setMenuState)
