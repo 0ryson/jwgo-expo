@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import useApp from '../../store/useApp'
+import useApp from '../../store/useApp.store'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import Home from './home'
 import Board from './board'
@@ -25,7 +25,7 @@ function TerritoriesTab() {
 
 export default function TabLayout() {
   const Tabs = createBottomTabNavigator()
-  const setMenuState = useApp((state) => state.setMenuState)
+  const { setMenuOpen } = useApp()
 
   return (
     <Tabs.Navigator
@@ -59,7 +59,7 @@ export default function TabLayout() {
             size={32}
             color={'#333'}
             onPress={() => {
-              setMenuState(true)
+              setMenuOpen(true)
             }}
           />
         ),
